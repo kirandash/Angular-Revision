@@ -101,3 +101,6 @@ Or
 ng-template is useful when having multiple Divs to show/hide conditionally.
 
 ### 3.2 Structural Directives: ngFor
+*ngFor accepts micro syntax. (Means: a micro syntax should have specific syntax. Doesn't accept any random syntax)
+let item of items
+note that we have * which means angular will put a ng-template around the target DOM
