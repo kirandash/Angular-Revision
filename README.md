@@ -86,3 +86,17 @@ Parent:
 deleteMediaItem(mediaItem){
     console.log('Deleted');
 }
+
+## 3. Directives and Pipes
+### 3.1 Structural Directives: ngIf
+Structural directives modify the DOM structure based on logic. "*" represents structural directives
+*ngIf: conditionally render a DOM element
+* is a syntactic sugar or short hand pattern for using <ng-template>.
+It is an alternate or shotcut.
+<div *ngIf="mediaItem.watchedOn">Watched on {{mediaItem.watchedOn}}</div>
+Or
+<ng-template [ngIf]="mediaItem.category">
+    DOM Content
+</ng-template>
+ng-template is useful when having multiple Divs to show/hide conditionally.
+
