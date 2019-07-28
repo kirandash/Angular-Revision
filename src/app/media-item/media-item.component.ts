@@ -17,4 +17,8 @@ export class MediaItemComponent implements OnInit {
     return `Watched on ${this.date}`;
   }
 
+  delete(){
+    console.log('deleted!');
+  }
+
 }

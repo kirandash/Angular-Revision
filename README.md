@@ -61,3 +61,7 @@ All variables or functions declared in component are available in expression con
 <h2 [textContent]="name"></h2>
 <h2 textContent="{{name}}"></h2>
 Both are same. square bracket arround attr tells angular to evaluate the expression. If removed, then we must use interpolation to evaluate the expression.
+
+### 2.10 Event binding
+(event)="fn()"
+(click)="delete()"
