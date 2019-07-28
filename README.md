@@ -33,3 +33,16 @@ Note that it will not render multiple instances.
 ### 2.4 Component Selector
 During bootstrapping angular searches for the bootstrapped component ie.e app.component and renders it's first instance.
 Selectors can be given custom name
+
+### 2.5 Component template
+template: (Inline markup)
+tempateUrl: (Markup from URL) './app.component.html' or 'app/app.component.html'. Note: for relative paths: src is the root start point.
+
+### 2.6 Component Style
+styles: [`h1 {color: red}`]
+styleUrls:
+Note: Angular adds dynamic tag to component and style. This is called scoping at component level.
+
+### 2.7 Using other components in a component
+We can use child components inside a component with using the selectors.
+Ex: media-item is a child component to app.component
