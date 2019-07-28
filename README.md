@@ -121,3 +121,10 @@ Get the values in directive
 @Input() set appFavorite(value){
     this.isFavorite = value;
 }
+
+### 3.6 Working with events in directives
+HostListeners can be used to listen to events from directives.
+@HostBinding('class.is-favorite-hovering') hovering = false; 
+@HostListener('mouseenter') onMouseEnter(){
+    this.hovering = true;
+}
