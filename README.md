@@ -46,3 +46,12 @@ Note: Angular adds dynamic tag to component and style. This is called scoping at
 ### 2.7 Using other components in a component
 We can use child components inside a component with using the selectors.
 Ex: media-item is a child component to app.component
+
+### 2.8 Interpolation and the expression context
+Template syntaxes: Interpolation, binding, expressions, conditional templating, template variables, template expression operators
+
+Interpolation: {{expression}} Does not support: assignments, newing up variables, chaining expressions, increment/decrement
+
+All variables or functions declared in component are available in expression context in html file and thus no need of using this. operator.
+{{ name }}
+{{ watchedOn() | date:'yyyy-MM-dd' }}

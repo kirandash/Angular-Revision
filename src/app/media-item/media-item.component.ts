@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./media-item.component.css']
 })
 export class MediaItemComponent implements OnInit {
-
+  name = 'The Redemption';
+  date = new Date();
   constructor() { }
 
   ngOnInit() {
+  }
+
+  watchedOn(){
+    return `Watched on ${this.date}`;
   }
 
 }
