@@ -18,3 +18,7 @@ EX: @Component()
 Root module: app.module.ts
 NgModule is the root Decorator used in app.module.ts file to bootstrap our application.
 @NgModule can accept some meta data properties such as imports (for Modules), declarations(for Components, directives and pipes) and bootstrap(for entry point modules) array.
+
+### 2.2 Component Metadata
+@Component decorator just like @NgModule is a core decorator from angular.
+Accepts meta data like: selector, templateUrl, styleUrls arrays
