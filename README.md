@@ -1,27 +1,10 @@
-# AngularRevision
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Angular Essentials - Revision
+## 1. Angular architecture:
+1.1 Component, bootstrap and the DOM: First app.module or component is bootstrapped and from there all the child elements are called on.
+1.2 Directives and Pipes: Component is actually a directive with a template. Directives provides functionalities and can transform the DOM. Types: a. Structural: modify the DOM of the target, b. Attribute: Changes behavior of the parent of target.
+Pipes: Helps modify content
+1.3 Data Binding: Interpolation, Directives, Local variables that can be used in a template for child elements
+1.4 Dependency Injection: Create decoupled modules/services and then use them when/where required.
+1.5 Services: It holds the business logic. Or interaction with third party apis for fetching/posting data. While the components just calls the services and use them.
+1.6 Data persistence: Local storage/Http(XHR, JSONP), 
+1.7 Routing: Router urls, url with parameters, life cycle hooks, directives to put in templates to show routing target content
