@@ -65,3 +65,11 @@ Both are same. square bracket arround attr tells angular to evaluate the express
 ### 2.10 Event binding
 (event)="fn()"
 (click)="delete()"
+
+### 2.11 Getting data to the component with Input
+Child:
+import Input from core
+@Input() mediaItem;
+Parent:
+firstMediaItem is defined in parent
+<app-media-item [mediaItem]="firstMediaItem"></app-media-item>
