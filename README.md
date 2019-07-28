@@ -22,3 +22,8 @@ NgModule is the root Decorator used in app.module.ts file to bootstrap our appli
 ### 2.2 Component Metadata
 @Component decorator just like @NgModule is a core decorator from angular.
 Accepts meta data like: selector, templateUrl, styleUrls arrays
+
+### 2.3 Bootstrapping module for Browser
+main.ts uses platformBrowserDynamic to bootstrap app module
+platformBrowserDynamic().bootstrapModule(AppModule)
+And then app component is rendered in index.html file where app-root selector is used.
