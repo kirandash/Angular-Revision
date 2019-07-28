@@ -8,7 +8,7 @@ import { FavoriteDirective } from './favorite.directive';
 import { CategoryListPipe } from './category-list.pipe';
 
 @NgModule({
-  declarations: [
+  declarations: [ // Components, Directives, Pipes
     AppComponent,
     MediaItemComponent,
     MediaItemListComponent,

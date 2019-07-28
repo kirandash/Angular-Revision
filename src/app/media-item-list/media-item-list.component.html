@@ -1,3 +1,8 @@
+<header>
+  <div class="categories-list">
+    {{ mediaItems | categoryList }}
+  </div>
+</header>
 <section>
     <app-media-item 
       [ngClass]="{'medium-movies':mediaItem.medium==='Movies', 'medium-series':mediaItem.medium==='Series'}"
