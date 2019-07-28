@@ -16,4 +16,9 @@ export class AppComponent {
     watchedOn: 1294166565384,
     isFavorite: false
   }; // To be inputed to child component media-item
+
+  deleteMediaItem(mediaItem){
+    console.log('Deleted');
+  }
+
 }

@@ -73,3 +73,16 @@ import Input from core
 Parent:
 firstMediaItem is defined in parent
 <app-media-item [mediaItem]="firstMediaItem"></app-media-item>
+
+### 2.12 Subscribing to component events with Output
+Child:
+import { Output, EventEmitter} from '@angular/core';
+@Output() deleteMedia = new EventEmitter();
+delete(){
+    this.deleteMedia.emit(this.mediaItem);
+}
+Parent:
+<app-media-item (deleteMedia)="deleteMediaItem($event)"></app-media-item>
+deleteMediaItem(mediaItem){
+    console.log('Deleted');
+}
