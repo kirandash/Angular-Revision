@@ -128,3 +128,11 @@ HostListeners can be used to listen to events from directives.
 @HostListener('mouseenter') onMouseEnter(){
     this.hovering = true;
 }
+
+### 3.7 Pipe
+A template expression operator that takes in a value and returns a new value representation.
+{{mediaItem.watchedOn | date}}
+Pipe with parameters
+{{mediaItem.watchedOn | date: 'shortDate'}}
+Chaining Pipes
+{{mediaItem.name | slice: 0 : 10 | uppercase}}
