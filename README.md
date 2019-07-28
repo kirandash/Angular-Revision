@@ -108,3 +108,9 @@ note that we have * which means angular will put a ng-template around the target
 ### 3.3 Attribute Directives: ngClass
 Attribute directives are used for changing behavior say design etc of DOM elements but do not change their structure.
 [ngClass]="{'medium-movies':mediaItem.medium==='Movies', 'medium-series':mediaItem.medium==='Series'}"
+
+### 3.4 Custom Directives: Favorite
+Setting a class based on favorite or not
+[appFavorite]
+HostBinding is used to bind a host element property to a directive property
+Add it to app.module
