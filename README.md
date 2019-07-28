@@ -100,3 +100,4 @@ Or
 </ng-template>
 ng-template is useful when having multiple Divs to show/hide conditionally.
 
+### 3.2 Structural Directives: ngFor
