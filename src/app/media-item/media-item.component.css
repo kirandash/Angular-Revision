@@ -1,12 +1,13 @@
 :host {
     display: flex;
     flex-direction: column;
-    width: 140px;
-    height: 200px;
+    width: 150px;
+    height: 250px;
     border: 2px solid;
     background-color: #29394b;
     padding: 10px;
     color: #bdc2c5;
+    margin-right: 15px;
   }
   h2 {
     font-size: 1.6em;

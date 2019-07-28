@@ -114,3 +114,10 @@ Setting a class based on favorite or not
 [appFavorite]
 HostBinding is used to bind a host element property to a directive property
 Add it to app.module
+
+### 3.5 Custom Directives: Values
+[appFavorite]="mediaItem.isFavorite"
+Get the values in directive
+@Input() set appFavorite(value){
+    this.isFavorite = value;
+}
