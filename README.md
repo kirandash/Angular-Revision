@@ -26,4 +26,10 @@ Accepts meta data like: selector, templateUrl, styleUrls arrays
 ### 2.3 Bootstrapping module for Browser
 main.ts uses platformBrowserDynamic to bootstrap app module
 platformBrowserDynamic().bootstrapModule(AppModule)
-And then app component is rendered in index.html file where app-root selector is used.
+And then in app module we have a bootstrap meta data that tells angular which component to load i.e. app.component.
+And then Angular will search for app component selector and render it where it is found for the first time. In our case it is in index.html file where app-root selector is used.
+Note that it will not render multiple instances.
+
+### 2.4 Component Selector
+During bootstrapping angular searches for the bootstrapped component ie.e app.component and renders it's first instance.
+Selectors can be given custom name
