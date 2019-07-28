@@ -104,3 +104,7 @@ ng-template is useful when having multiple Divs to show/hide conditionally.
 *ngFor accepts micro syntax. (Means: a micro syntax should have specific syntax. Doesn't accept any random syntax)
 let item of items
 note that we have * which means angular will put a ng-template around the target DOM
+
+### 3.3 Attribute Directives: ngClass
+Attribute directives are used for changing behavior say design etc of DOM elements but do not change their structure.
+[ngClass]="{'medium-movies':mediaItem.medium==='Movies', 'medium-series':mediaItem.medium==='Series'}"
