@@ -55,3 +55,9 @@ Interpolation: {{expression}} Does not support: assignments, newing up variables
 All variables or functions declared in component are available in expression context in html file and thus no need of using this. operator.
 {{ name }}
 {{ watchedOn() | date:'yyyy-MM-dd' }}
+
+### 2.9 Property Binding
+[htmlattr]="expression"
+<h2 [textContent]="name"></h2>
+<h2 textContent="{{name}}"></h2>
+Both are same. square bracket arround attr tells angular to evaluate the expression. If removed, then we must use interpolation to evaluate the expression.
