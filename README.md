@@ -136,3 +136,12 @@ Pipe with parameters
 {{mediaItem.watchedOn | date: 'shortDate'}}
 Chaining Pipes
 {{mediaItem.name | slice: 0 : 10 | uppercase}}
+
+### 3.8 Custom Pipe
+Pipe to show unique media categories
+@Pipe({
+  name: 'categoryList'
+  pure: true
+})
+pure tells us if the pipe is stateless or statefull. true means it can take and return data without any side effects.
+transform is the fn angular uses.
