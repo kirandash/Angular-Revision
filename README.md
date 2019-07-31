@@ -161,3 +161,10 @@ But for fields we need to use the directive ngModel. It will pick the name attri
 <form (ngSubmit)="onSubmit(mediaItemForm.value)" #mediaItemForm="ngForm">
 ngSubmit is triggered when submit button is clicked in form.
 local variable mediaItemForm set to ngForm. This will set a FormGroup model behind the scene for this form local variable.
+
+### 4.3 Model Driven Forms
+Form field contract
+Field validation rules
+Change tracking
+Can be unit tested
+Thus, template driven forms are simple and easy to use but model driven forms are more powerful.
