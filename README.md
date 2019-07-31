@@ -155,3 +155,9 @@ a. Template Driven: Most of the form logic are in template
 b. Model Driven: Most of the form logic are in controller
 
 ### 4.2 Template Drive Forms
+import FormsModule from angular core.
+No need of any identifier for form tags in html. Since angular automatically identifieds form tags for template driven forms. 
+But for fields we need to use the directive ngModel. It will pick the name attribute automatically for reference.
+<form (ngSubmit)="onSubmit(mediaItemForm.value)" #mediaItemForm="ngForm">
+ngSubmit is triggered when submit button is clicked in form.
+local variable mediaItemForm set to ngForm. This will set a FormGroup model behind the scene for this form local variable.

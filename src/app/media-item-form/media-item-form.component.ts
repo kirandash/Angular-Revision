@@ -12,4 +12,8 @@ export class MediaItemFormComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSubmit(mediaItem) {
+    console.log(mediaItem); // Will only hold values for fields with ngModel directive
+  }
+
 }
