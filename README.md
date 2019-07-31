@@ -180,3 +180,9 @@ this.mediaForm = new FormGroup({
 Wiring up formGroup and formControl to template
 <form (ngSubmit)="onSubmit(mediaForm.value)" [formGroup]="mediaForm">
 <input type="text" name="name" id="name" formControlName="name">
+
+### 4.4 Model Driven Forms - Built in validation
+Validators.compose([
+    Validators.required,
+    Validators.pattern('[\\w\\-\\s\\/]+')
+]))
