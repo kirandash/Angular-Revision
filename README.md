@@ -145,3 +145,13 @@ Pipe to show unique media categories
 })
 pure tells us if the pipe is stateless or statefull. true means it can take and return data without any side effects.
 transform is the fn angular uses.
+
+## 4. Forms
+### 4.1 Angular Forms
+Forms are used to collect, validate and submit data.
+Provides the following features: Built-in validators, Custom validators, Async validators, Form object representation
+Types: 
+a. Template Driven: Most of the form logic are in template
+b. Model Driven: Most of the form logic are in controller
+
+### 4.2 Template Drive Forms
