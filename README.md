@@ -168,3 +168,15 @@ Field validation rules
 Change tracking
 Can be unit tested
 Thus, template driven forms are simple and easy to use but model driven forms are more powerful.
+import { ReactiveFormsModule } from '@angular/forms';
+In template driven approach FormGroup model was automatically created behind the scenes. For model driven approach we will have to create one FormGroup that will represent the form elements in template.
+Defining FormGroup and FormControl
+this.mediaForm = new FormGroup({
+    medium: new FormControl('Movies'),
+    name: new FormControl(''),
+    category: new FormControl(''),
+    year: new FormControl('')
+});
+Wiring up formGroup and formControl to template
+<form (ngSubmit)="onSubmit(mediaForm.value)" [formGroup]="mediaForm">
+<input type="text" name="name" id="name" formControlName="name">
