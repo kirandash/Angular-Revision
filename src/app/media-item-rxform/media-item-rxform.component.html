@@ -13,6 +13,9 @@
     <li>
       <label for="name">Name</label>
       <input type="text" name="name" id="name" formControlName="name">
+      <div *ngIf="mediaForm.get('name').hasError('pattern')" class="error">
+        Name has invalid characters
+      </div>
     </li>
     <li>
       <label for="category">Category</label>
@@ -28,6 +31,12 @@
     <li>
       <label for="year">Year</label>
       <input type="text" name="year" id="year" maxlength="4" formControlName="year">
+      <!--<div *ngIf="mediaForm.get('year').hasError('year')" class="error">
+        Year must be between 1990 to 2100
+      </div>-->
+      <div *ngIf="mediaForm.get('year').errors as yearErrors" class="error">
+        Year must be between {{yearErrors.year.min}} to {{yearErrors.year.max}}
+      </div>
     </li>
   </ul>
   <button type="submit" [disabled]="!mediaForm.valid">Save</button>

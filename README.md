@@ -190,3 +190,7 @@ Validators.compose([
 ### 4.5 Model Driven Forms - Built in validation
 year: new FormControl('', this.yearValidator)
 default value and validator are the two parameters being passed
+
+### 4.6 Model Driven Forms - Error handling
+mediaForm.get('name').hasError('pattern')
+mediaForm.get('year').errors as yearErrors

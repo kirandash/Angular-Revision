@@ -26,15 +26,22 @@ export class MediaItemRxformComponent implements OnInit {
 
   yearValidator(control){
     if(control.value.trim().length === 0){
+      // No error
       return null; // Since year is optional
     }
     let year = parseInt(control.value); // Convert year string to num
     let minYear = 1990;
-    let maxYear = 2100;
+    let maxYear = 2120;
     if(year >= minYear && year <= maxYear){
+      // No error so return null
       return null;
     } else {
-      return { 'year' : true };
+      // return { 'year' : true };
+      // There is error then dont return null
+      return { 'year' : {
+        'min': minYear,
+        'max': maxYear
+      }};
     }
   }
 
