@@ -186,3 +186,7 @@ Validators.compose([
     Validators.required,
     Validators.pattern('[\\w\\-\\s\\/]+')
 ]))
+
+### 4.5 Model Driven Forms - Built in validation
+year: new FormControl('', this.yearValidator)
+default value and validator are the two parameters being passed

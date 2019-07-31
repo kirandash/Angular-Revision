@@ -20,8 +20,22 @@ export class MediaItemRxformComponent implements OnInit {
         Validators.pattern('[\\w\\-\\s\\/]+')
       ])),// Multiple validations for one field to be passed in compose array
       category: new FormControl(''),
-      year: new FormControl('')
+      year: new FormControl('', this.yearValidator)
     });
+  }
+
+  yearValidator(control){
+    if(control.value.trim().length === 0){
+      return null; // Since year is optional
+    }
+    let year = parseInt(control.value); // Convert year string to num
+    let minYear = 1990;
+    let maxYear = 2100;
+    if(year >= minYear && year <= maxYear){
+      return null;
+    } else {
+      return { 'year' : true };
+    }
   }
 
 }
