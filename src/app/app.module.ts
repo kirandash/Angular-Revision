@@ -12,10 +12,7 @@ import { MediaItemFormComponent } from './media-item-form/media-item-form.compon
 import { MediaItemRxformComponent } from './media-item-rxform/media-item-rxform.component';
 
 import { MediaItemService } from './media-item.service';
-
-const lookupLists = {
-  mediums: ['Movies', 'Series']
-};
+import { lookupListToken, lookupLists } from './providers';
 
 @NgModule({
   declarations: [ // Components, Directives, Pipes
@@ -34,7 +31,7 @@ const lookupLists = {
   ],
   providers: [
     MediaItemService,
-    { provide: 'lookupListToken', useValue: lookupLists }
+    { provide: lookupListToken, useValue: lookupLists }
   ], // Providers tell angulars to add the modules to root injector so that it is available for the app
   bootstrap: [AppComponent]
 })

@@ -228,3 +228,6 @@ const lookupLists = {
 Add the above to provides in app module
 @Inject('lookupListToken') public myLookupLists
 *ngFor="let medium of myLookupLists.mediums"
+
+### 5.7 Injection token
+Using this to avoid using string literal token name with @Inject decorator. Thus providing a better/safer way to inject our values. Since we always mistype a string. But with injecttoken if there is any typo error it will throw exception now.

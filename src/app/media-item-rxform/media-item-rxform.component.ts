@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 // import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Validators, FormBuilder } from '@angular/forms';
 import { MediaItemService } from '../media-item.service';
+import { lookupListToken } from '../providers';
 
 @Component({
   selector: 'app-media-item-rxform',
@@ -10,7 +11,7 @@ import { MediaItemService } from '../media-item.service';
 })
 export class MediaItemRxformComponent implements OnInit {
   mediaForm; // Property to hold the data from form
-  constructor(private formBuilder: FormBuilder, private mediaItemService: MediaItemService, @Inject('lookupListToken') public myLookupLists) { }
+  constructor(private formBuilder: FormBuilder, private mediaItemService: MediaItemService, @Inject(lookupListToken) public myLookupLists) { }
 
   ngOnInit() {
     // The code here can also be put in constructor but it is preferred to use ngOnInit since this is a lifecycle event. Thus can be easily unit tested
