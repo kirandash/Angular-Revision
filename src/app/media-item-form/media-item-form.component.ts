@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MediaItemService } from '../media-item.service';
 
 @Component({
   selector: 'app-media-item-form',
@@ -7,13 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MediaItemFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mediaItemService: MediaItemService) { }
 
   ngOnInit() {
   }
 
   onSubmit(mediaItem) {
     console.log(mediaItem); // Will only hold values for fields with ngModel directive
+    this.mediaItemService.add(mediaItem);
   }
 
 }

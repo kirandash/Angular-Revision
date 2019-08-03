@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MediaItemService } from '../media-item.service';
 
 @Component({
   selector: 'app-media-item-list',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MediaItemListComponent implements OnInit {
 
-  onMediaItemDelete(mediaItem) { }
-
+  deleteMediaItem(mediaItem) { 
+    this.mediaItemService.delete(mediaItem);
+  }
+  mediaItems;
   /* Moving data to mediaItem service 
   mediaItems = [
     {
@@ -55,7 +58,9 @@ export class MediaItemListComponent implements OnInit {
     }
   ];*/
 
-  constructor() { }
+  constructor(private mediaItemService: MediaItemService) {
+    this.mediaItems = this.mediaItemService.get();
+  }
 
   ngOnInit() {
   }

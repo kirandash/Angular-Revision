@@ -216,3 +216,6 @@ Injecting FormBuilder to form class instead of imporing FormGroup and FormContro
 
 ### 5.4 Creating and providing a service
 providers: []
+
+### 5.5 Using the service in components
+inject in constructor. And use get, add , delete custom methods

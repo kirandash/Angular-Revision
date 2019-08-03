@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Validators, FormBuilder } from '@angular/forms';
+import { MediaItemService } from '../media-item.service';
 
 @Component({
   selector: 'app-media-item-rxform',
@@ -9,7 +10,7 @@ import { Validators, FormBuilder } from '@angular/forms';
 })
 export class MediaItemRxformComponent implements OnInit {
   mediaForm; // Property to hold the data from form
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private mediaItemService: MediaItemService) { }
 
   ngOnInit() {
     // The code here can also be put in constructor but it is preferred to use ngOnInit since this is a lifecycle event. Thus can be easily unit tested
@@ -54,6 +55,11 @@ export class MediaItemRxformComponent implements OnInit {
         'max': maxYear
       }};
     }
+  }
+
+  onSubmit(mediaItem) {
+    console.log(mediaItem); // Will only hold values for fields with ngModel directive
+    this.mediaItemService.add(mediaItem);
   }
 
 }

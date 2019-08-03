@@ -9,6 +9,9 @@ export class MediaItemService {
     return this.mediaItems;
   }
   add(mediaItem) {
+    let index = this.mediaItems.indexOf(mediaItem);
+    // Dont add duplicate items
+    if(index == -1)
     this.mediaItems.push(mediaItem);
   }
   delete(mediaItem) {
