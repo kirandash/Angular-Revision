@@ -11,6 +11,8 @@ import { CategoryListPipe } from './category-list.pipe';
 import { MediaItemFormComponent } from './media-item-form/media-item-form.component';
 import { MediaItemRxformComponent } from './media-item-rxform/media-item-rxform.component';
 
+import { MediaItemService } from './media-item.service';
+
 @NgModule({
   declarations: [ // Components, Directives, Pipes
     AppComponent,
@@ -26,7 +28,7 @@ import { MediaItemRxformComponent } from './media-item-rxform/media-item-rxform.
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [MediaItemService], // Providers tell angulars to add the modules to root injector so that it is available for the app
   bootstrap: [AppComponent]
 })
 export class AppModule { }
