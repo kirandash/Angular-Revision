@@ -219,3 +219,12 @@ providers: []
 
 ### 5.5 Using the service in components
 inject in constructor. And use get, add , delete custom methods
+
+### 5.6 The Inject decorator
+const lookupLists = {
+  mediums: ['Movies', 'Series']
+};
+{ provide: 'lookupListToken', useValue: lookupLists }
+Add the above to provides in app module
+@Inject('lookupListToken') public myLookupLists
+*ngFor="let medium of myLookupLists.mediums"
