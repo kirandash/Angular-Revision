@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+// import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-media-item-rxform',
@@ -8,11 +9,11 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class MediaItemRxformComponent implements OnInit {
   mediaForm; // Property to hold the data from form
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     // The code here can also be put in constructor but it is preferred to use ngOnInit since this is a lifecycle event. Thus can be easily unit tested
-    this.mediaForm = new FormGroup({
+    /*this.mediaForm = new FormGroup({
       medium: new FormControl('Movies'), // Default value
       // name: new FormControl('', Validators.pattern('[\\w\\-\\s\\/]+')),
       name: new FormControl('', Validators.compose([
@@ -21,6 +22,16 @@ export class MediaItemRxformComponent implements OnInit {
       ])),// Multiple validations for one field to be passed in compose array
       category: new FormControl(''),
       year: new FormControl('', this.yearValidator)
+    });*/
+    this.mediaForm = this.formBuilder.group({
+      medium: this.formBuilder.control('Movies'), // Default value
+      // name: this.formBuilder.control('', Validators.pattern('[\\w\\-\\s\\/]+')),
+      name: this.formBuilder.control('', Validators.compose([
+        Validators.required,
+        Validators.pattern('[\\w\\-\\s\\/]+')
+      ])),// Multiple validations for one field to be passed in compose array
+      category: this.formBuilder.control(''),
+      year: this.formBuilder.control('', this.yearValidator)
     });
   }
 

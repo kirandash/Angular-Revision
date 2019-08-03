@@ -194,3 +194,22 @@ default value and validator are the two parameters being passed
 ### 4.6 Model Driven Forms - Error handling
 mediaForm.get('name').hasError('pattern')
 mediaForm.get('year').errors as yearErrors
+
+## 5 Dependency Injection
+### 5.1 Intro
+Dependency injection brings modularity into angular.
+It is done in two steps: 
+a. Registering services for injection. It lets angular know what all modules can be possibly injected.
+b. Calling the service for use. In constructor. This is a singleton behavior. Means: once the service is called once, the instance is stored in memory. and from the next time onwards the same is used without calling it. Note that the singleton memory instance of service injected is available to the component where it's registered and to it's child.
+
+### 5.2 Services in Angular
+No angular specific declaration. Plane old javascript class declaration like below code.
+class MediaItemService {
+    getById(id){
+    }
+}
+Use: a. For data fetch and send. (Reusable, modular and testable)
+b. For business logics. (Reusable, modular and testable)
+
+### 5.3 Class constructor injection
+Injecting FormBuilder to form class instead of imporing FormGroup and FormControl which we don't have to instantiate in our component any more.
