@@ -231,3 +231,11 @@ Add the above to provides in app module
 
 ### 5.7 Injection token
 Using this to avoid using string literal token name with @Inject decorator. Thus providing a better/safer way to inject our values. Since we always mistype a string. But with injecttoken if there is any typo error it will throw exception now.
+
+## 6. Http
+### 6.1 The Angular HttpClient
+
+### 6.2 Use a mock back end for HTTP calls
+HttpXhrBackend,
+MockXHRBackend
+{ provide: HttpXhrBackend, useClass: MockXHRBackend }
