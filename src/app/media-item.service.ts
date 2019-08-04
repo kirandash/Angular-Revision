@@ -8,6 +8,10 @@ export class MediaItemService {
   get() {
     return this.mediaItems;
   }
+  getFiltered(medium) {
+    var newMediaItems = medium == 'Series' || medium == 'Movies' ? this.mediaItems.filter(function(item){ return item.medium == medium }) : this.mediaItems;
+    return newMediaItems;
+  }
   add(mediaItem) {
     let index = this.mediaItems.indexOf(mediaItem);
     // Dont add duplicate items

@@ -259,3 +259,13 @@ router-outlet is the selector which renders the components as a sibling to it.
 ### 7.4 Router links
 This is used to create navigation links in our angular app.
 <a routerLink="/Movies">
+
+### 7.5 Working with route parameters
+import { ActivatedRoute } from '@angular/router';
+this.activatedRoute.params.subscribe(params => {
+    let medium = params['medium'];
+    if(medium.toLowerCase() === 'all') {
+    medium = '';
+    }
+    this.mediaItems = this.mediaItemService.getFiltered(medium);
+})
