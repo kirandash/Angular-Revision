@@ -255,3 +255,7 @@ import it in app.module and add to imports array
 ### 7.3 Router outlets
 After routes are registered, in order to render it we use router outlets. Router outlets are structural directives which defines where the components from Routes are going to be loaded at.
 router-outlet is the selector which renders the components as a sibling to it.
+
+### 7.4 Router links
+This is used to create navigation links in our angular app.
+<a routerLink="/Movies">
