@@ -5,7 +5,7 @@ import { MediaItemListComponent } from './media-item-list/media-item-list.compon
 const appRoutes : Routes = [
     { path: 'add', component: MediaItemRxformComponent },
     { path: ':medium', component: MediaItemListComponent }, // Order is important
-    { path: '', pathMatch: 'full', redirectTo: 'all' }
+    { path: '', pathMatch: 'full', redirectTo: 'home' } // Default route will be redirected to 'home'
 ]; // No need to export since we are not injecting it anywhere
 
 export const routing = RouterModule.forRoot(appRoutes);
