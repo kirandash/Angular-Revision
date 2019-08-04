@@ -239,3 +239,11 @@ Using this to avoid using string literal token name with @Inject decorator. Thus
 HttpXhrBackend,
 MockXHRBackend
 { provide: HttpXhrBackend, useClass: MockXHRBackend }
+
+### 6.3 Use the HttpClient for GET calls
+
+## 7. Routing
+Angular's routing module uses the browser's history.pushstate to trigger navigation.
+### 7.1 Setting the base href and configuring routes
+index.html <base href="/">
+Note that in routes array order is important since the first match found will be considered by Angular
