@@ -269,3 +269,7 @@ this.activatedRoute.params.subscribe(params => {
     }
     this.mediaItems = this.mediaItemService.getFiltered(medium);
 })
+
+### 7.6 Using the Router class to navigate
+Like routerLink , we can use Router Class for navigation.
+this.router.navigate(['/', mediaItem.medium]);

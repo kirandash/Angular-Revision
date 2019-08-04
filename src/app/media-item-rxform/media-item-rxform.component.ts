@@ -3,6 +3,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 import { MediaItemService } from '../media-item.service';
 import { lookupListToken } from '../providers';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-media-item-rxform',
@@ -11,7 +12,7 @@ import { lookupListToken } from '../providers';
 })
 export class MediaItemRxformComponent implements OnInit {
   mediaForm; // Property to hold the data from form
-  constructor(private formBuilder: FormBuilder, private mediaItemService: MediaItemService, @Inject(lookupListToken) public myLookupLists) { }
+  constructor(private formBuilder: FormBuilder, private mediaItemService: MediaItemService, @Inject(lookupListToken) public myLookupLists, private router: Router) { }
 
   ngOnInit() {
     // The code here can also be put in constructor but it is preferred to use ngOnInit since this is a lifecycle event. Thus can be easily unit tested
@@ -61,6 +62,7 @@ export class MediaItemRxformComponent implements OnInit {
   onSubmit(mediaItem) {
     console.log(mediaItem); // Will only hold values for fields with ngModel directive
     this.mediaItemService.add(mediaItem);
+    this.router.navigate(['/', mediaItem.medium]); // accepts an array of params for navigation
   }
 
 }
