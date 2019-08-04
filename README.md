@@ -247,3 +247,9 @@ Angular's routing module uses the browser's history.pushstate to trigger navigat
 ### 7.1 Setting the base href and configuring routes
 index.html <base href="/">
 Note that in routes array order is important since the first match found will be considered by Angular
+
+### 7.2 Registering routing in the app module
+export const routing = RouterModule.forRoot(appRoutes);
+import it in app.module and add to imports array
+
+### 7.3 

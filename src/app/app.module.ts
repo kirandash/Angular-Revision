@@ -15,6 +15,7 @@ import { MediaItemRxformComponent } from './media-item-rxform/media-item-rxform.
 import { MediaItemService } from './media-item.service';
 import { lookupListToken, lookupLists } from './providers';
 // import { MockXHRBackend } from './mock-xhr-backend';
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [ // Components, Directives, Pipes
@@ -29,7 +30,8 @@ import { lookupListToken, lookupLists } from './providers';
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    routing
   ],
   providers: [
     MediaItemService,
